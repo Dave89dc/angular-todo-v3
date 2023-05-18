@@ -13,6 +13,8 @@ import { AppComponent } from './app.component';
 import { TodoAddComponent } from './components/todo-add/todo-add.component';
 import { TodoDetailComponent } from './components/todo-detail/todo-detail.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
+import { PriorityDirective } from './directive/priority/priority.directive';
+import { TodoDirectiveDirective } from './directive/todo-directive/todo-directive.directive';
 
 
 
@@ -22,7 +24,9 @@ import { TodoListComponent } from './components/todo-list/todo-list.component';
     AppComponent,
     TodoListComponent,
     TodoDetailComponent,
-    TodoAddComponent
+    TodoAddComponent,
+    PriorityDirective,
+    TodoDirectiveDirective
   ],
   imports: [
     BrowserModule,
