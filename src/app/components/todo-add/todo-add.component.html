@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
   <label for="input-title">Inserisci Titolo</label>
   <input id="input-title" type="text" [(ngModel)]="newTodo.title">
 </div>
@@ -10,4 +10,20 @@
   <label for="input-priority">Inserisci Priorità</label>
   <input id="input-priority" type="number" [(ngModel)]="newTodo.priority">
 </div>
-<button (click)="saveTodo()">Salva</button>
+<button (click)="saveTodo()">Salva</button> -->
+
+<div class="form">
+  <mat-form-field class="example-full-width">
+    <mat-label for="input-title">Titolo:</mat-label>
+    <input id="input-title" type="text" [(ngModel)]="newTodo.title" matInput placeholder="Inserisci titolo">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label for="input-description">Descrizione:</mat-label>
+    <input id="input-description" type="text" [(ngModel)]="newTodo.description" matInput placeholder="Inserisci descrizione">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label for="input-priority">Priorità:</mat-label>
+    <input id="input-priority" type="number" [(ngModel)]="newTodo.priority" type="number" matInput placeholder="Ex. Pizza">
+  </mat-form-field>
+  <button (click)="saveTodo()" mat-raised-button color="accent">Salva</button>
+</div>

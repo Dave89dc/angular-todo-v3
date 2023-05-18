@@ -1,6 +1,4 @@
-<ul>
+<div class="box-card">
   <!-- <li *ngFor="let todo of todoArray">{{todo.title}}</li> -->
-  <app-todo-detail
-  *ngFor="let todo of dataMangerServ.todos"
-  [todoDetail]="todo"></app-todo-detail>
-</ul>
+  <app-todo-detail *ngFor="let todo of dataMangerServ.todos" [todoDetail]="todo"></app-todo-detail>
+</div>

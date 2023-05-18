@@ -28,6 +28,5 @@ export class DataManagerService {
 
   deleteTodo(todoToDelete: Todo){
     this.todos = this.todos.filter(todo => todo.title !== todoToDelete.title);
-    console.log(this.todos);
   }
 }
