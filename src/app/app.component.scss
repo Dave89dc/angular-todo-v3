@@ -1,15 +1,10 @@
-.footer {
-  height: 210px;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  align-items: start;
-  position: fixed;
-  top: 78vh;
-}
-
 .title {
   margin-top: 15px;
 }
 
-
+.add-btn{
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  z-index: 100;
+}

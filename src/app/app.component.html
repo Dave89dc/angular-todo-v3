@@ -2,8 +2,6 @@
   <h1 class="title">Angular Todo</h1>
 </mat-toolbar>
 <app-todo-list></app-todo-list>
-<mat-toolbar class="footer" color="primary">
-  <h2>Aggiungi Todo:</h2>
-  <app-todo-add></app-todo-add>
-</mat-toolbar>
-
+<button (click)="openModal()" mat-fab color="primary" class="add-btn" aria-label="add Todo">
+  <mat-icon>add</mat-icon>
+</button>

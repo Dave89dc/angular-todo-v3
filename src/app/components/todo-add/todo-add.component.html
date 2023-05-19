@@ -1,29 +1,26 @@
-<!-- <div>
-  <label for="input-title">Inserisci Titolo</label>
-  <input id="input-title" type="text" [(ngModel)]="newTodo.title">
-</div>
-<div>
-  <label for="input-description">Inserisci Descrizione</label>
-  <input id="input-description" type="text" [(ngModel)]="newTodo.description">
-</div>
-<div>
-  <label for="input-priority">Inserisci Priorità</label>
-  <input id="input-priority" type="number" [(ngModel)]="newTodo.priority">
-</div>
-<button (click)="saveTodo()">Salva</button> -->
-
 <div class="form">
-  <mat-form-field class="example-full-width">
-    <mat-label for="input-title">Titolo:</mat-label>
-    <input id="input-title" type="text" [(ngModel)]="newTodo.title" matInput placeholder="Inserisci titolo">
-  </mat-form-field>
-  <mat-form-field class="example-full-width">
-    <mat-label for="input-description">Descrizione:</mat-label>
-    <input id="input-description" type="text" [(ngModel)]="newTodo.description" matInput placeholder="Inserisci descrizione">
-  </mat-form-field>
-  <mat-form-field class="example-full-width">
-    <mat-label for="input-priority">Priorità:</mat-label>
-    <input id="input-priority" type="number" [(ngModel)]="newTodo.priority" type="number" matInput placeholder="Ex. Pizza">
-  </mat-form-field>
-  <button (click)="saveTodo()" mat-raised-button color="accent">Salva</button>
+  <h1 mat-dialog-title>Aggiungi un nuovo Todo</h1>
+  <div mat-dialog-content class="dialog-box">
+    <mat-form-field>
+      <mat-label>Inseisci Titolo:</mat-label>
+      <input [(ngModel)]="newTodo.title" matInput>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Seleziona Priorità:</mat-label>
+      <mat-select [(ngModel)]="newTodo.priority">
+        <mat-option value="1">Priorità bassa</mat-option>
+        <mat-option value="2">Priorità media</mat-option>
+        <mat-option value="3">Priorità alta</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Scrivi una Descrizione:</mat-label>
+      <textarea [(ngModel)]="newTodo.description" matInput></textarea>
+    </mat-form-field>
+  </div>
+
+  <div class="form-btn-box" align="end" mat-dialog-actions>
+    <button mat-button mat-dialog-close>Annulla</button>
+    <button (click)="saveTodo()" mat-button mat-dialog-close cdkFocusInitial>Salva</button>
+  </div>
 </div>
